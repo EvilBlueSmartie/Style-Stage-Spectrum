@@ -1,5 +1,5 @@
 
-// Colours
+/// Colours
 
 $background: #030303;
 $background-lighter: #0f0f0f; 
@@ -15,15 +15,17 @@ $blue: #23ddff;
 $violet: #a023ff;
 
 
-// Fonts
+/// Fonts
 
 $arvo: 'Arvo', sans-serif;
 $plex: 'IBM Plex Sans', sans-serif;
 $plex-mono: 'IBM PLex Mono', sans-serif;
 
 
-// Spectrum
+/// Spectrum
 
+// The spectrum gradient used for the main title.
+// Use in conjuntion with the text-clip mixin.
 $spectrum: linear-gradient(
 	180deg,
 	/* transparent 0%, transparent 1%, */
@@ -39,6 +41,8 @@ $spectrum: linear-gradient(
 	/* transparent 99%, transparent 100% */
 );
 
+// This gradient has wider blank stripes to allow better
+// viewing at it's smaller intended size.
 $spectrum-mini: linear-gradient(
 	180deg,
 	$red 0%, $red 17%,
@@ -53,6 +57,6 @@ $spectrum-mini: linear-gradient(
 );
 
 
-// Misc
+/// Misc
 
 $border-radius: 0.3125rem;

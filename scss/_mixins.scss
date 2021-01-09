@@ -1,5 +1,10 @@
 
+
 @mixin text-clip {
+	// Risizes, positions and clips the background
+	// to colour in the text with the gradient or
+	// background image.
+
 	background-position: 0% 45%;
 	background-size: 100% 70%;
 	background-clip: text;
