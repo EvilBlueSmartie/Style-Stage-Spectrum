@@ -7,6 +7,8 @@ body {
 	svg {
 		width: 32px;
 		height: 32px;
-		fill: $main-text;
+		fill: none;
+		background: $spectrum;
+		clip-path: $clip-star;
 	}
 }

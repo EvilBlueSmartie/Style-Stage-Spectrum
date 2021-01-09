@@ -11,13 +11,15 @@ header {
 		font-size: 8rem;
 		font-weight: 700;
 		text-transform: uppercase;
-		@include spectrum-gradient;
+		background: $spectrum;
 		@include text-clip;
 	}
 
 	svg {
 		width: 32px;
 		height: 32px;
-		fill: $main-text;
+		fill: none;
+		background: $spectrum;
+		clip-path: $clip-star;
 	}
 }

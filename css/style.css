@@ -351,7 +351,11 @@ body {
 body svg {
   width: 32px;
   height: 32px;
-  fill: #f5f5f5;
+  fill: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(1%, transparent), color-stop(1%, #ff2828), color-stop(19%, #ff2828), color-stop(19%, transparent), color-stop(21%, transparent), color-stop(21%, #ff8400), color-stop(39%, #ff8400), color-stop(39%, transparent), color-stop(41%, transparent), color-stop(41%, #ffe21b), color-stop(59%, #ffe21b), color-stop(59%, transparent), color-stop(61%, transparent), color-stop(61%, #4fff19), color-stop(79%, #4fff19), color-stop(79%, transparent), color-stop(81%, transparent), color-stop(81%, #23ddff), color-stop(99%, #23ddff), color-stop(99%, transparent), to(transparent));
+  background: linear-gradient(180deg, transparent 0%, transparent 1%, #ff2828 1%, #ff2828 19%, transparent 19%, transparent 21%, #ff8400 21%, #ff8400 39%, transparent 39%, transparent 41%, #ffe21b 41%, #ffe21b 59%, transparent 59%, transparent 61%, #4fff19 61%, #4fff19 79%, transparent 79%, transparent 81%, #23ddff 81%, #23ddff 99%, transparent 99%, transparent 100%);
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
 header {
@@ -375,6 +379,10 @@ header h1 {
 header svg {
   width: 32px;
   height: 32px;
-  fill: #f5f5f5;
+  fill: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(1%, transparent), color-stop(1%, #ff2828), color-stop(19%, #ff2828), color-stop(19%, transparent), color-stop(21%, transparent), color-stop(21%, #ff8400), color-stop(39%, #ff8400), color-stop(39%, transparent), color-stop(41%, transparent), color-stop(41%, #ffe21b), color-stop(59%, #ffe21b), color-stop(59%, transparent), color-stop(61%, transparent), color-stop(61%, #4fff19), color-stop(79%, #4fff19), color-stop(79%, transparent), color-stop(81%, transparent), color-stop(81%, #23ddff), color-stop(99%, #23ddff), color-stop(99%, transparent), to(transparent));
+  background: linear-gradient(180deg, transparent 0%, transparent 1%, #ff2828 1%, #ff2828 19%, transparent 19%, transparent 21%, #ff8400 21%, #ff8400 39%, transparent 39%, transparent 41%, #ffe21b 41%, #ffe21b 59%, transparent 59%, transparent 61%, #4fff19 61%, #4fff19 79%, transparent 79%, transparent 81%, #23ddff 81%, #23ddff 99%, transparent 99%, transparent 100%);
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 /*# sourceMappingURL=style.css.map */
