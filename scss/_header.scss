@@ -1,0 +1,23 @@
+
+// .skip-link {
+
+// }
+
+header {
+	text-align: center;
+
+	h1 {
+		font-family: $arvo;
+		font-size: 8rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		@include spectrum-gradient;
+		@include text-clip;
+	}
+
+	svg {
+		width: 32px;
+		height: 32px;
+		fill: $main-text;
+	}
+}

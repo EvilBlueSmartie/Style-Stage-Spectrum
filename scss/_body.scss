@@ -1,0 +1,12 @@
+
+body {
+	background-color: $background;
+	font-family: $plex;
+	color: $main-text;
+
+	svg {
+		width: 32px;
+		height: 32px;
+		fill: $main-text;
+	}
+}

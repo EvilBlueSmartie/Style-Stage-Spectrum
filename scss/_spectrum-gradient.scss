@@ -1,0 +1,25 @@
+
+@mixin spectrum-gradient {
+	background: linear-gradient(
+		180deg,
+		transparent 0%, transparent 1%,
+		$red 1%, $red 19%,
+		transparent 19%, transparent 21%,
+		$orange 21%, $orange 39%,
+		transparent 39%, transparent 41%,
+		$yellow 41%, $yellow 59%,
+		transparent 59%, transparent 61%,
+		$green 61%, $green 79%,
+		transparent 79%, transparent 81%,
+		$blue 81%, $blue 99%,
+		transparent 99%, transparent 100%
+	);
+}
+
+@mixin text-clip {
+	background-position: 0% 45%;
+	background-size: 100% 70%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
