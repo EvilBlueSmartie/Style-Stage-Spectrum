@@ -1,0 +1,48 @@
+
+nav {
+	height: 15vh;
+
+	ul {
+		list-style: none;
+		display: flex;
+		margin: 0;
+		padding: 0;
+		justify-content: center;
+	}
+
+	li {
+		position: relative;
+		margin: 0.25rem;
+
+		&:first-of-type {
+			@include nav-underline($red);
+		}
+
+		&:nth-of-type(2){
+			@include nav-underline($orange);
+		}
+
+		&:nth-of-type(3){
+			@include nav-underline($yellow);
+		}
+
+		&:nth-of-type(4){
+			@include nav-underline($green);
+		}
+
+		&:nth-of-type(5){
+			@include nav-underline($blue);
+		}
+
+		&:nth-of-type(6){
+			@include nav-underline($violet);
+		}
+
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: 700;
+			padding: 0 1rem 0.5rem;
+		}
+	}
+}

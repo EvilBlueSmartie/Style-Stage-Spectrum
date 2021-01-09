@@ -2,6 +2,7 @@
 // Colours
 
 $background: #030303;
+$background-github: #0f0f0f; 
 
 $main-text: #f5f5f5;
 
@@ -10,6 +11,7 @@ $orange: #ff8400;
 $yellow: #ffe21b;
 $green: #4fff19;
 $blue: #23ddff;
+$violet: #a023ff;
 
 
 // Fonts
@@ -17,3 +19,39 @@ $blue: #23ddff;
 $arvo: 'Arvo', sans-serif;
 $plex: 'IBM Plex Sans', sans-serif;
 $plex-mono: 'IBM PLex Mono', sans-serif;
+
+
+// Spectrum
+
+$spectrum: linear-gradient(
+	180deg,
+	transparent 0%, transparent 1%,
+	$red 1%, $red 19%,
+	transparent 19%, transparent 21%,
+	$orange 21%, $orange 39%,
+	transparent 39%, transparent 41%,
+	$yellow 41%, $yellow 59%,
+	transparent 59%, transparent 61%,
+	$green 61%, $green 79%,
+	transparent 79%, transparent 81%,
+	$blue 81%, $blue 99%,
+	transparent 99%, transparent 100%
+);
+
+$spectrum-mini: linear-gradient(
+	180deg,
+	$red 0%, $red 17%,
+	transparent 17%, transparent 23%,
+	$orange 23%, $orange 37%,
+	transparent 37%, transparent 43%,
+	$yellow 43%, $yellow 57%,
+	transparent 57%, transparent 63%,
+	$green 63%, $green 77%,
+	transparent 77%, transparent 83%,
+	$blue 83%, $blue 100%,
+);
+
+
+// Clip Paths
+
+$clip-star: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);

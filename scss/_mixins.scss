@@ -1,0 +1,57 @@
+
+@mixin text-clip {
+	background-position: 0% 45%;
+	background-size: 100% 70%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin github-link {
+	.link-github {
+		position: relative;
+		display: inline-flex;
+		flex-direction: column;
+		background: $background-github;
+		padding: .5em 5em;
+		border-radius: 0.3125rem;
+		overflow: hidden;
+		transition: transform 200ms ease-in-out;
+
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $main-text;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			background: $spectrum-mini;
+			height: 20px;
+			width: 100px;
+			top: 35%;
+			right: -5%;
+			transform: rotate(-65deg);
+		}
+	}
+}
+
+@mixin nav-underline($colour) {
+	a::after {
+		content: '';
+		position: absolute;
+		background-color: $colour;
+		height: 0.5rem;
+		left: 0;
+		top: 1.25rem;
+		right: 0;
+		transition: 200ms ease-in-out;
+	}
+
+	a:hover::after {
+		height: 1rem;
+	}
+}

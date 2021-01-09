@@ -4,11 +4,13 @@ body {
 	font-family: $plex;
 	color: $main-text;
 
+	a {
+		color: $main-text;
+	}
+
 	svg {
 		width: 32px;
 		height: 32px;
-		fill: none;
-		background: $spectrum;
-		clip-path: $clip-star;
+		fill: $main-text;
 	}
 }
