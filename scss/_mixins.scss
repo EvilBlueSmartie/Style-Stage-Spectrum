@@ -12,6 +12,7 @@
 		position: relative;
 		display: inline-flex;
 		flex-direction: column;
+		align-items: center;
 		background: $background-github;
 		padding: .5em 5em;
 		border-radius: 0.3125rem;
@@ -22,8 +23,10 @@
 		text-decoration: none;
 		color: $main-text;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			transform: scale(1.05);
+			color: $main-text;
 		}
 
 		&::after {
@@ -48,10 +51,11 @@
 		left: 0;
 		top: 1.25rem;
 		right: 0;
-		transition: 200ms ease-in-out;
+		transition: 150ms ease-in-out;
 	}
 
-	a:hover::after {
+	a:hover::after,
+	a:focus::after {
 		height: 1rem;
 	}
 }

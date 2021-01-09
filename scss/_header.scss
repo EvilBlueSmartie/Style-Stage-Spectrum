@@ -1,9 +1,21 @@
 
-// .skip-link {
+.skip-link {
+	color: $darker-text;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	transition: 200ms ease-in-out;
+	margin: 0.5rem;
 
-// }
+	&:hover,
+	&:focus {
+		color: $main-text;
+	}
+}
 
 header {
+	display: grid;
+	place-items: center;
 	text-align: center;
 	height: 80vh;
 
@@ -14,6 +26,12 @@ header {
 		text-transform: uppercase;
 		background: $spectrum;
 		@include text-clip;
+		margin-top: 1rem;
+	}
+
+	p {
+		color: $darker-text;
+		padding-bottom: 2rem;
 	}
 
 	svg {

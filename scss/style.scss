@@ -9,3 +9,7 @@
 @import 'header';
 @import 'nav';
 @import 'footer';
+
+html {
+	scroll-behavior: smooth;
+}

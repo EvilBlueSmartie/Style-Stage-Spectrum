@@ -346,10 +346,34 @@ body {
   background-color: #030303;
   font-family: "IBM Plex Sans", sans-serif;
   color: #f5f5f5;
+  padding-top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header,
+body nav,
+body main {
+  max-width: 1500px;
 }
 
 body a {
-  color: #f5f5f5;
+  color: #23ddff;
+  outline: none;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+
+body a:hover, body a:focus {
+  color: #a023ff;
 }
 
 body svg {
@@ -358,7 +382,24 @@ body svg {
   fill: #f5f5f5;
 }
 
+.skip-link {
+  color: #bababa;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  margin: 0.5rem;
+}
+
+.skip-link:hover, .skip-link:focus {
+  color: #f5f5f5;
+}
+
 header {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   text-align: center;
   height: 80vh;
 }
@@ -375,6 +416,12 @@ header h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 1rem;
+}
+
+header p {
+  color: #bababa;
+  padding-bottom: 2rem;
 }
 
 header svg {
@@ -392,6 +439,9 @@ header .link-github {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #0f0f0f;
   padding: .5em 5em;
   border-radius: 0.3125rem;
@@ -405,9 +455,10 @@ header .link-github {
   color: #f5f5f5;
 }
 
-header .link-github:hover {
+header .link-github:hover, header .link-github:focus {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  color: #f5f5f5;
 }
 
 header .link-github::after {
@@ -425,6 +476,9 @@ header .link-github::after {
 
 nav {
   height: 15vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 nav ul {
@@ -452,11 +506,12 @@ nav li:first-of-type a::after {
   left: 0;
   top: 1.25rem;
   right: 0;
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
 }
 
-nav li:first-of-type a:hover::after {
+nav li:first-of-type a:hover::after,
+nav li:first-of-type a:focus::after {
   height: 1rem;
 }
 
@@ -468,11 +523,12 @@ nav li:nth-of-type(2) a::after {
   left: 0;
   top: 1.25rem;
   right: 0;
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
 }
 
-nav li:nth-of-type(2) a:hover::after {
+nav li:nth-of-type(2) a:hover::after,
+nav li:nth-of-type(2) a:focus::after {
   height: 1rem;
 }
 
@@ -484,11 +540,12 @@ nav li:nth-of-type(3) a::after {
   left: 0;
   top: 1.25rem;
   right: 0;
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
 }
 
-nav li:nth-of-type(3) a:hover::after {
+nav li:nth-of-type(3) a:hover::after,
+nav li:nth-of-type(3) a:focus::after {
   height: 1rem;
 }
 
@@ -500,11 +557,12 @@ nav li:nth-of-type(4) a::after {
   left: 0;
   top: 1.25rem;
   right: 0;
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
 }
 
-nav li:nth-of-type(4) a:hover::after {
+nav li:nth-of-type(4) a:hover::after,
+nav li:nth-of-type(4) a:focus::after {
   height: 1rem;
 }
 
@@ -516,11 +574,12 @@ nav li:nth-of-type(5) a::after {
   left: 0;
   top: 1.25rem;
   right: 0;
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
 }
 
-nav li:nth-of-type(5) a:hover::after {
+nav li:nth-of-type(5) a:hover::after,
+nav li:nth-of-type(5) a:focus::after {
   height: 1rem;
 }
 
@@ -532,11 +591,12 @@ nav li:nth-of-type(6) a::after {
   left: 0;
   top: 1.25rem;
   right: 0;
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
 }
 
-nav li:nth-of-type(6) a:hover::after {
+nav li:nth-of-type(6) a:hover::after,
+nav li:nth-of-type(6) a:focus::after {
   height: 1rem;
 }
 
@@ -545,6 +605,11 @@ nav li a {
   text-transform: uppercase;
   font-weight: 700;
   padding: 0 1rem 0.5rem;
+  color: #f5f5f5;
+}
+
+nav li a:hover, nav li a:focus {
+  color: #f5f5f5;
 }
 
 footer .link-github {
@@ -556,6 +621,9 @@ footer .link-github {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #0f0f0f;
   padding: .5em 5em;
   border-radius: 0.3125rem;
@@ -569,9 +637,10 @@ footer .link-github {
   color: #f5f5f5;
 }
 
-footer .link-github:hover {
+footer .link-github:hover, footer .link-github:focus {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  color: #f5f5f5;
 }
 
 footer .link-github::after {
@@ -585,5 +654,9 @@ footer .link-github::after {
   right: -5%;
   -webkit-transform: rotate(-65deg);
           transform: rotate(-65deg);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 /*# sourceMappingURL=style.css.map */
