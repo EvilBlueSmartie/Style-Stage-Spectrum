@@ -2,7 +2,7 @@
 // Colours
 
 $background: #030303;
-$background-github: #0f0f0f; 
+$background-lighter: #0f0f0f; 
 
 $main-text: #f5f5f5;
 $darker-text: #bababa;
@@ -26,7 +26,7 @@ $plex-mono: 'IBM PLex Mono', sans-serif;
 
 $spectrum: linear-gradient(
 	180deg,
-	transparent 0%, transparent 1%,
+	/* transparent 0%, transparent 1%, */
 	$red 1%, $red 19%,
 	transparent 19%, transparent 21%,
 	$orange 21%, $orange 39%,
@@ -35,8 +35,8 @@ $spectrum: linear-gradient(
 	transparent 59%, transparent 61%,
 	$green 61%, $green 79%,
 	transparent 79%, transparent 81%,
-	$blue 81%, $blue 99%,
-	transparent 99%, transparent 100%
+	$blue 81%, $blue 99%
+	/* transparent 99%, transparent 100% */
 );
 
 $spectrum-mini: linear-gradient(
@@ -53,6 +53,6 @@ $spectrum-mini: linear-gradient(
 );
 
 
-// Clip Paths
+// Misc
 
-$clip-star: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+$border-radius: 0.3125rem;

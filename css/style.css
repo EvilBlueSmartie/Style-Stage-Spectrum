@@ -359,14 +359,8 @@ body {
           align-items: center;
 }
 
-body header,
-body nav,
-body main {
-  max-width: 1500px;
-}
-
 body a {
-  color: #23ddff;
+  color: #ff8400;
   outline: none;
   -webkit-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
@@ -374,12 +368,6 @@ body a {
 
 body a:hover, body a:focus {
   color: #a023ff;
-}
-
-body svg {
-  width: 32px;
-  height: 32px;
-  fill: #f5f5f5;
 }
 
 .skip-link {
@@ -404,13 +392,30 @@ header {
   height: 80vh;
 }
 
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 header h1 {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   font-family: "Arvo", sans-serif;
   font-size: 8rem;
   font-weight: 700;
   text-transform: uppercase;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(1%, transparent), color-stop(1%, #ff2828), color-stop(19%, #ff2828), color-stop(19%, transparent), color-stop(21%, transparent), color-stop(21%, #ff8400), color-stop(39%, #ff8400), color-stop(39%, transparent), color-stop(41%, transparent), color-stop(41%, #ffe21b), color-stop(59%, #ffe21b), color-stop(59%, transparent), color-stop(61%, transparent), color-stop(61%, #4fff19), color-stop(79%, #4fff19), color-stop(79%, transparent), color-stop(81%, transparent), color-stop(81%, #23ddff), color-stop(99%, #23ddff), color-stop(99%, transparent), to(transparent));
-  background: linear-gradient(180deg, transparent 0%, transparent 1%, #ff2828 1%, #ff2828 19%, transparent 19%, transparent 21%, #ff8400 21%, #ff8400 39%, transparent 39%, transparent 41%, #ffe21b 41%, #ffe21b 59%, transparent 59%, transparent 61%, #4fff19 61%, #4fff19 79%, transparent 79%, transparent 81%, #23ddff 81%, #23ddff 99%, transparent 99%, transparent 100%);
+  background: #ff8400;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ff2828), color-stop(19%, #ff2828), color-stop(19%, transparent), color-stop(21%, transparent), color-stop(21%, #ff8400), color-stop(39%, #ff8400), color-stop(39%, transparent), color-stop(41%, transparent), color-stop(41%, #ffe21b), color-stop(59%, #ffe21b), color-stop(59%, transparent), color-stop(61%, transparent), color-stop(61%, #4fff19), color-stop(79%, #4fff19), color-stop(79%, transparent), color-stop(81%, transparent), color-stop(81%, #23ddff), color-stop(99%, #23ddff));
+  background: linear-gradient(180deg, #ff2828 1%, #ff2828 19%, transparent 19%, transparent 21%, #ff8400 21%, #ff8400 39%, transparent 39%, transparent 41%, #ffe21b 41%, #ffe21b 59%, transparent 59%, transparent 61%, #4fff19 61%, #4fff19 79%, transparent 79%, transparent 81%, #23ddff 81%, #23ddff 99%);
   background-position: 0% 45%;
   background-size: 100% 70%;
   background-clip: text;
@@ -419,9 +424,24 @@ header h1 {
   margin-top: 1rem;
 }
 
-header p {
+header h2 {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
   color: #bababa;
-  padding-bottom: 2rem;
+  font-size: 1.25rem;
+}
+
+header h2::after {
+  content: '...';
+}
+
+header p {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  color: #bababa;
+  margin-bottom: 5rem;
 }
 
 header svg {
@@ -431,10 +451,19 @@ header svg {
 }
 
 header .link-github {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+header .link-github {
   position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -443,35 +472,33 @@ header .link-github {
       -ms-flex-align: center;
           align-items: center;
   background: #0f0f0f;
-  padding: .5em 5em;
+  padding: 1em 5em;
   border-radius: 0.3125rem;
-  overflow: hidden;
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: 700;
   color: #f5f5f5;
+  letter-spacing: .125em;
+}
+
+header .link-github svg {
+  width: 32px;
+  height: 32px;
+  fill: #ff8400;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+  margin-bottom: 0.5rem;
 }
 
 header .link-github:hover, header .link-github:focus {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
   color: #f5f5f5;
 }
 
-header .link-github::after {
-  content: '';
-  position: absolute;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff2828), color-stop(17%, #ff2828), color-stop(17%, transparent), color-stop(23%, transparent), color-stop(23%, #ff8400), color-stop(37%, #ff8400), color-stop(37%, transparent), color-stop(43%, transparent), color-stop(43%, #ffe21b), color-stop(57%, #ffe21b), color-stop(57%, transparent), color-stop(63%, transparent), color-stop(63%, #4fff19), color-stop(77%, #4fff19), color-stop(77%, transparent), color-stop(83%, transparent), color-stop(83%, #23ddff), to(#23ddff));
-  background: linear-gradient(180deg, #ff2828 0%, #ff2828 17%, transparent 17%, transparent 23%, #ff8400 23%, #ff8400 37%, transparent 37%, transparent 43%, #ffe21b 43%, #ffe21b 57%, transparent 57%, transparent 63%, #4fff19 63%, #4fff19 77%, transparent 77%, transparent 83%, #23ddff 83%, #23ddff 100%);
-  height: 20px;
-  width: 100px;
-  top: 35%;
-  right: -5%;
-  -webkit-transform: rotate(-65deg);
-          transform: rotate(-65deg);
+header .link-github:hover svg, header .link-github:focus svg {
+  fill: #a023ff;
 }
 
 nav {
@@ -606,17 +633,84 @@ nav li a {
   font-weight: 700;
   padding: 0 1rem 0.5rem;
   color: #f5f5f5;
+  letter-spacing: .125em;
 }
 
 nav li a:hover, nav li a:focus {
   color: #f5f5f5;
 }
 
+main {
+  line-height: 1.6;
+  width: 100%;
+}
+
+main h2 {
+  position: relative;
+  font-family: "Arvo", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  background: #0f0f0f;
+  width: 100%;
+  padding: 1rem 10rem;
+  overflow: hidden;
+}
+
+main h2::after {
+  content: '';
+  position: absolute;
+  background: #ff8400;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff2828), color-stop(17%, #ff2828), color-stop(17%, transparent), color-stop(23%, transparent), color-stop(23%, #ff8400), color-stop(37%, #ff8400), color-stop(37%, transparent), color-stop(43%, transparent), color-stop(43%, #ffe21b), color-stop(57%, #ffe21b), color-stop(57%, transparent), color-stop(63%, transparent), color-stop(63%, #4fff19), color-stop(77%, #4fff19), color-stop(77%, transparent), color-stop(83%, transparent), color-stop(83%, #23ddff), to(#23ddff));
+  background: linear-gradient(180deg, #ff2828 0%, #ff2828 17%, transparent 17%, transparent 23%, #ff8400 23%, #ff8400 37%, transparent 37%, transparent 43%, #ffe21b 43%, #ffe21b 57%, transparent 57%, transparent 63%, #4fff19 63%, #4fff19 77%, transparent 77%, transparent 83%, #23ddff 83%, #23ddff 100%);
+  height: 30px;
+  width: 200px;
+  top: 30%;
+  right: 0%;
+  -webkit-transform: rotate(-65deg);
+          transform: rotate(-65deg);
+}
+
+main h2 ~ *:not(a) {
+  width: 1000px;
+}
+
+main h3 {
+  text-align: center;
+}
+
+main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section > *:not(h2) {
+  margin: 0 auto;
+}
+
+main section > a {
+  background-color: #0f0f0f;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  color: #f5f5f5;
+  letter-spacing: .125em;
+  padding: 0.75em 1.5em;
+  border-radius: 0.3125rem;
+}
+
 footer .link-github {
   position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -625,35 +719,53 @@ footer .link-github {
       -ms-flex-align: center;
           align-items: center;
   background: #0f0f0f;
-  padding: .5em 5em;
+  padding: 1em 5em;
   border-radius: 0.3125rem;
-  overflow: hidden;
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: 700;
   color: #f5f5f5;
+  letter-spacing: .125em;
+}
+
+footer .link-github svg {
+  width: 32px;
+  height: 32px;
+  fill: #ff8400;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+  margin-bottom: 0.5rem;
 }
 
 footer .link-github:hover, footer .link-github:focus {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
   color: #f5f5f5;
 }
 
-footer .link-github::after {
-  content: '';
-  position: absolute;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff2828), color-stop(17%, #ff2828), color-stop(17%, transparent), color-stop(23%, transparent), color-stop(23%, #ff8400), color-stop(37%, #ff8400), color-stop(37%, transparent), color-stop(43%, transparent), color-stop(43%, #ffe21b), color-stop(57%, #ffe21b), color-stop(57%, transparent), color-stop(63%, transparent), color-stop(63%, #4fff19), color-stop(77%, #4fff19), color-stop(77%, transparent), color-stop(83%, transparent), color-stop(83%, #23ddff), to(#23ddff));
-  background: linear-gradient(180deg, #ff2828 0%, #ff2828 17%, transparent 17%, transparent 23%, #ff8400 23%, #ff8400 37%, transparent 37%, transparent 43%, #ffe21b 43%, #ffe21b 57%, transparent 57%, transparent 63%, #4fff19 63%, #4fff19 77%, transparent 77%, transparent 83%, #23ddff 83%, #23ddff 100%);
-  height: 20px;
-  width: 100px;
-  top: 35%;
-  right: -5%;
-  -webkit-transform: rotate(-65deg);
-          transform: rotate(-65deg);
+footer .link-github:hover svg, footer .link-github:focus svg {
+  fill: #a023ff;
+}
+
+footer .link-downloadcss,
+footer .link-downloadhtml,
+footer .link-codepen {
+  background-color: #0f0f0f;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  color: #f5f5f5;
+  letter-spacing: .125em;
+  padding: 0.75em 1.5em;
+  border-radius: 0.3125rem;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {

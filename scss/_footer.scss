@@ -1,4 +1,10 @@
 
 footer {
 	@include github-link;
+
+	.link-downloadcss,
+	.link-downloadhtml,
+	.link-codepen {
+		@include button;
+	}
 }

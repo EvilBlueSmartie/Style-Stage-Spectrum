@@ -9,14 +9,8 @@ body {
 	flex-direction: column;
 	align-items: center;
 
-	header,
-	nav,
-	main {
-		max-width: 1500px;
-	}
-
 	a {
-		color: $blue;
+		color: $orange;
 		outline: none;
 		transition: 150ms ease-in-out;
 
@@ -24,11 +18,5 @@ body {
 		&:focus {
 			color: $violet;
 		}
-	}
-
-	svg {
-		width: 32px;
-		height: 32px;
-		fill: $main-text;
 	}
 }

@@ -7,37 +7,50 @@
 	-webkit-text-fill-color: transparent;
 }
 
+@mixin button {
+	background-color: $background-lighter;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 700;
+	color: $main-text;
+	letter-spacing: .125em;
+	padding: 0.75em 1.5em;
+	border-radius: $border-radius;
+	
+}
+
 @mixin github-link {
 	.link-github {
 		position: relative;
-		display: inline-flex;
+		display: flex;
 		flex-direction: column;
 		align-items: center;
-		background: $background-github;
-		padding: .5em 5em;
-		border-radius: 0.3125rem;
-		overflow: hidden;
-		transition: transform 200ms ease-in-out;
+		background: $background-lighter;
+		padding: 1em 5em;
+		border-radius: $border-radius;
+		width: max-content;
 
 		text-transform: uppercase;
 		text-decoration: none;
+		font-weight: 700;
 		color: $main-text;
+		letter-spacing: .125em;
+
+		svg {
+			width: 32px;
+			height: 32px;
+			fill: $orange;
+			transition: 150ms ease-in-out;
+			margin-bottom: 0.5rem;
+		}
 
 		&:hover,
 		&:focus {
-			transform: scale(1.05);
 			color: $main-text;
-		}
 
-		&::after {
-			content: '';
-			position: absolute;
-			background: $spectrum-mini;
-			height: 20px;
-			width: 100px;
-			top: 35%;
-			right: -5%;
-			transform: rotate(-65deg);
+			svg {
+				fill: $violet;
+			}
 		}
 	}
 }
