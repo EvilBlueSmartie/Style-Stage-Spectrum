@@ -1378,17 +1378,6 @@ ul {
   bottom: 0;
 }
 
-#styles .container ul li:first-of-type::after {
-  position: absolute;
-  content: '{}';
-  font-size: 1.25em;
-  color: #4fff19;
-  margin-left: .5em;
-  font-weight: 700;
-  top: .45em;
-  right: .65em;
-}
-
 #styles .container ul li:nth-of-type(2) {
   position: relative;
   overflow: hidden;
@@ -1404,17 +1393,6 @@ ul {
   bottom: 0;
 }
 
-#styles .container ul li:nth-of-type(2)::after {
-  position: absolute;
-  content: '{}';
-  font-size: 1.25em;
-  color: #23ddff;
-  margin-left: .5em;
-  font-weight: 700;
-  top: .45em;
-  right: .65em;
-}
-
 #styles .container ul li:last-of-type {
   position: relative;
   overflow: hidden;
@@ -1428,17 +1406,6 @@ ul {
   top: 0;
   left: 0;
   bottom: 0;
-}
-
-#styles .container ul li:last-of-type::after {
-  position: absolute;
-  content: '{}';
-  font-size: 1.25em;
-  color: #a023ff;
-  margin-left: .5em;
-  font-weight: 700;
-  top: .45em;
-  right: .65em;
 }
 
 #styles .container ul li > span {

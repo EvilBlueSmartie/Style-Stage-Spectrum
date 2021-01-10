@@ -34,16 +34,18 @@
 
 	&:first-of-type {
 		@include button-accent($colour1);
+		@include button-braces($colour1)
 	}
 
 	&:nth-of-type(2) {
 		@include button-accent($colour2);
+		@include button-braces($colour2)
 	}
 
 	&:last-of-type {
 		@include button-accent($colour3);
+		@include button-braces($colour3)
 	}
-
 }
 
 @mixin button-accent($colour) {
@@ -59,7 +61,9 @@
 		left: 0;
 		bottom: 0;
 	}
+}
 
+@mixin button-braces($colour) {
 	&::after {
 		position: absolute;
 		content: '{}';
