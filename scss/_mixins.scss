@@ -25,7 +25,7 @@
 	padding: 0.75em 2.65em;
 	border-radius: $border-radius;
 	outline: none;
-	transition: 150ms ease-in-out;
+	transition: $transition;
 
 	&:hover,
 	&:focus {
