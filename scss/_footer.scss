@@ -10,7 +10,7 @@
 	.link-downloadcss,
 	.link-downloadhtml,
 	.link-codepen {
-		@include button;
+		@include button($red, $orange, $yellow);
 	}
 }
 
@@ -19,6 +19,7 @@ footer {
 	font-size: 0.8rem;
 	color: $darker-text;
 
+	// Social Links
 	ul {
 		list-style: none;
 		display: flex;
@@ -29,6 +30,7 @@ footer {
 		}
 	}
 
+	// 'Star on GitHub' SVG icon.
 	svg {
 		height: 1.25em;
 		width: 1.25em;

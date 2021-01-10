@@ -54,15 +54,8 @@ header {
 		margin-bottom: 5rem;
 	}
 
-	svg {
-		width: 32px;
-		height: 32px;
-		fill: $main-text;
-	}
-
 	.link-github {
 		order: 3;
-		width: max-content;
 	}
 
 	@include github-link;

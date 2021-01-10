@@ -12,16 +12,17 @@
 	-webkit-text-fill-color: transparent;
 }
 
-@mixin button {
+@mixin button($colour1, $colour2, $colour3) {
 	display: inline-block;
 	width: 15rem;
 	background-color: $background-lighter;
 	text-transform: uppercase;
 	text-decoration: none;
 	font-weight: 700;
+	font-size: 0.8750rem;
 	color: $main-text;
 	letter-spacing: .125em;
-	padding: 0.75em 1.5em;
+	padding: 0.75em 2.5em;
 	border-radius: $border-radius;
 	outline: none;
 	transition: 150ms ease-in-out;
@@ -32,15 +33,15 @@
 	}
 
 	&:first-of-type {
-		@include button-accent($red);
+		@include button-accent($colour1);
 	}
 
 	&:nth-of-type(2) {
-		@include button-accent($orange);
+		@include button-accent($colour2);
 	}
 
 	&:last-of-type {
-		@include button-accent($yellow);
+		@include button-accent($colour3);
 	}
 
 }

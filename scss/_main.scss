@@ -20,18 +20,6 @@ main {
 		padding: 1rem 10rem;
 		margin: 0;
 
-		// &::after {
-		// 	content: '';
-		// 	position: absolute;
-		// 	background: $orange;
-		// 	background: $spectrum-mini;
-		// 	height: 30px;
-		// 	width: 200px;
-		// 	top: 30%;
-		// 	right: 0%;
-		// 	transform: rotate(-65deg);
-		// }
-
 		@include spectrum-spripe;
 	}
 
@@ -46,10 +34,8 @@ main {
 	blockquote {
 		background: $background-lighter;
 		border-radius: $border-radius;
-
 		font-family: $plex-mono;
 		color: $darker-text;
-
 		margin: 0;
 		padding: 1rem 2.5rem;
 
@@ -57,7 +43,15 @@ main {
 			display: block;
 			text-transform: uppercase;
 		}
-	}
 
+		// TODO: Tart this up a bit.
+	}
 	
+	// 'Review Guidelines' button.
+	#guidelines .container > a {
+		text-align: center;
+		@include button($violet, $violet, $violet);
+		margin: 1em auto;
+		width: max-content;
+	}
 }
