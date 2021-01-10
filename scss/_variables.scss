@@ -32,8 +32,7 @@ $plex-mono: 'IBM PLex Mono', sans-serif;
 // Use in conjuntion with the text-clip mixin.
 $spectrum: linear-gradient(
 	180deg,
-	/* transparent 0%, transparent 1%, */
-	$red 1%, $red 19%,
+	$red 0%, $red 19%,
 	transparent 19%, transparent 21%,
 	$orange 21%, $orange 39%,
 	transparent 39%, transparent 41%,
@@ -41,8 +40,7 @@ $spectrum: linear-gradient(
 	transparent 59%, transparent 61%,
 	$green 61%, $green 79%,
 	transparent 79%, transparent 81%,
-	$blue 81%, $blue 99%
-	/* transparent 99%, transparent 100% */
+	$blue 81%, $blue 100%
 );
 
 // This gradient has wider blank stripes to allow better

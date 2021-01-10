@@ -1,5 +1,8 @@
 
 body {
+	display: flex;
+	flex-direction: column;
+	
 	background-color: $background;
 	font-family: $plex;
 	color: $main-text;
