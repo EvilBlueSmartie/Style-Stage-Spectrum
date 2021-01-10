@@ -13,6 +13,8 @@
 }
 
 @mixin button {
+	display: inline-block;
+	width: 15rem;
 	background-color: $background-lighter;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -21,7 +23,13 @@
 	letter-spacing: .125em;
 	padding: 0.75em 1.5em;
 	border-radius: $border-radius;
-	
+	outline: none;
+	transition: 150ms ease-in-out;
+
+	&:hover,
+	&:focus {
+		color: $violet;
+	}
 }
 
 @mixin github-link {
