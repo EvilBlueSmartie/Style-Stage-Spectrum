@@ -129,3 +129,12 @@
 
 	overflow: hidden;
 }
+
+@mixin ul-bullet($colour) {
+	&::before {
+		content: '#';
+		margin-right: .5em;
+		color: $colour;
+	}
+}
+

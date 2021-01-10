@@ -134,11 +134,6 @@ section.container {
 			display: grid;
 			grid-template-rows: repeat(2, max-content);
 			grid-template-columns: repeat(2, 1fr);
-
-			li {
-				padding-right: 3em;
-				padding-bottom: 1em;
-			}
 		}
 	}
 }
