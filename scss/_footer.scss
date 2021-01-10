@@ -14,7 +14,23 @@
 }
 
 footer {
-	@include github-link;
+	text-align: center;
+	font-size: 0.8rem;
+	color: $darker-text;
 
+	ul {
+		list-style: none;
+		display: flex;
+		justify-content: center;
 
+		li + li {
+			margin-left: 1em;
+		}
+	}
+
+	svg {
+		height: 1.25em;
+		width: 1.25em;
+		fill: $orange;
+	}
 }

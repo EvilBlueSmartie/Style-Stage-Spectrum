@@ -2,13 +2,10 @@
 main {
 	line-height: 1.6;
 	width: 100%;
+	margin-bottom: 2rem;
 
 	section.container {
 		padding-bottom: 1.5rem;
-
-		p:first-of-type {
-			margin-top: 1.25rem;
-		}
 	}
 
 	h2 {
@@ -21,23 +18,50 @@ main {
 		width: 100%;
 		height: 100%;
 		padding: 1rem 10rem;
-		overflow: hidden;
 		margin: 0;
 
-		&::after {
-			content: '';
-			position: absolute;
-			background: $orange;
-			background: $spectrum-mini;
-			height: 30px;
-			width: 200px;
-			top: 30%;
-			right: 0%;
-			transform: rotate(-65deg);
-		}
+		// &::after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	background: $orange;
+		// 	background: $spectrum-mini;
+		// 	height: 30px;
+		// 	width: 200px;
+		// 	top: 30%;
+		// 	right: 0%;
+		// 	transform: rotate(-65deg);
+		// }
+
+		@include spectrum-spripe;
 	}
 
 	h3 {
 		text-align: center;
+	}
+
+	p {
+		margin: 0.75em 0;
+	}
+	
+	blockquote {
+		background: $background-lighter;
+		border-radius: $border-radius;
+
+		font-family: $plex-mono;
+		color: $darker-text;
+
+		margin: 0;
+		padding: 1rem 2.5rem;
+
+		strong {
+			display: block;
+			text-transform: uppercase;
+		}
+	}
+
+	#about li {
+		text-transform: lowercase;
+		font-family: $plex-mono;
+		color: $darker-text;
 	}
 }
