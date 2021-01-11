@@ -363,11 +363,25 @@ main h2::after {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff2828), color-stop(17%, #ff2828), color-stop(17%, transparent), color-stop(23%, transparent), color-stop(23%, #ff8400), color-stop(37%, #ff8400), color-stop(37%, transparent), color-stop(43%, transparent), color-stop(43%, #ffe21b), color-stop(57%, #ffe21b), color-stop(57%, transparent), color-stop(63%, transparent), color-stop(63%, #4fff19), color-stop(77%, #4fff19), color-stop(77%, transparent), color-stop(83%, transparent), color-stop(83%, #23ddff), to(#23ddff));
   background: linear-gradient(180deg, #ff2828 0%, #ff2828 17%, transparent 17%, transparent 23%, #ff8400 23%, #ff8400 37%, transparent 37%, transparent 43%, #ffe21b 43%, #ffe21b 57%, transparent 57%, transparent 63%, #4fff19 63%, #4fff19 77%, transparent 77%, transparent 83%, #23ddff 83%, #23ddff 100%);
   height: 30px;
-  width: 300px;
-  top: 30%;
-  right: -2%;
+  width: 400px;
+  top: 50%;
+  right: -5%;
   -webkit-transform: rotate(-65deg);
           transform: rotate(-65deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+@media (max-width: 950px) {
+  main h2::after {
+    right: -10%;
+  }
+}
+
+@media (max-width: 800px) {
+  main h2::after {
+    right: -15%;
+  }
 }
 
 @media (max-width: 650px) {
@@ -376,11 +390,23 @@ main h2::after {
   }
 }
 
+@media (max-width: 450px) {
+  main h2::after {
+    right: -30%;
+  }
+}
+
 @media (max-width: 650px) {
   main h2 {
     font-size: 2rem;
     text-align: left;
     padding-left: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  main h2 {
+    font-size: 1.5rem;
   }
 }
 
@@ -464,10 +490,15 @@ body ul {
   section.container p,
   section.container ul,
   section.container ol {
-    margin: 0 1rem;
+    margin: 1.25rem 1rem 0;
   }
-  section.container p {
-    margin-top: 1.25rem;
+}
+
+@media (max-width: 650px) {
+  section.container p,
+  section.container ul,
+  section.container ol {
+    margin: 1.25rem 1.5rem 0;
   }
 }
 
@@ -597,9 +628,6 @@ section.container blockquote {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  #about section.container:last-of-type ul li {
-    margin-left: 2rem;
   }
 }
 
@@ -809,6 +837,30 @@ header h1 {
   margin-top: 1rem;
 }
 
+@media (max-width: 950px) {
+  header h1 {
+    font-size: 6.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  header h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  header h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
 header h2 {
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
@@ -819,6 +871,14 @@ header h2 {
 
 header h2::after {
   content: '...';
+}
+
+@media (max-width: 650px) {
+  header h2 {
+    font-size: 1.125rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 header p {
@@ -1025,7 +1085,7 @@ nav li a:hover, nav li a:focus {
   font-family: "IBM PLex Mono", sans-serif;
   color: #bababa;
   margin: 2rem 0;
-  padding: 1rem 3.5rem 1.25rem;
+  padding: 0.75rem 3.5rem 1rem;
 }
 
 #about blockquote strong {
@@ -1059,11 +1119,15 @@ nav li a:hover, nav li a:focus {
   #about blockquote {
     margin: 2rem 1rem;
   }
-}
-
-@media (max-width: 950px) {
   #about ul {
     margin-top: 1.25rem;
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #about blockquote {
+    padding: 0.5rem 2rem 1.5rem;
   }
 }
 
@@ -1132,11 +1196,99 @@ nav li a:hover, nav li a:focus {
   color: #ffe21b;
 }
 
+@media (max-width: 650px) {
+  #about li:nth-of-type(1)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #ff2828;
+  }
+  #about li:nth-of-type(2)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #ff8400;
+  }
+  #about li:nth-of-type(3)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #ffe21b;
+  }
+  #about li:nth-of-type(4)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #4fff19;
+  }
+  #about li:nth-of-type(5)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #23ddff;
+  }
+  #about li:nth-of-type(6)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #a023ff;
+  }
+  #about li:nth-of-type(7)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #ff2828;
+  }
+  #about li:nth-of-type(8)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #ff8400;
+  }
+  #about li:nth-of-type(9)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #ffe21b;
+  }
+  #about li:nth-of-type(10)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #4fff19;
+  }
+  #about li:nth-of-type(11)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #23ddff;
+  }
+  #about li:nth-of-type(12)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #a023ff;
+  }
+  #about li:nth-of-type(13)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #ff2828;
+  }
+  #about li:nth-of-type(14)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #ff8400;
+  }
+  #about li:nth-of-type(15)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #ffe21b;
+  }
+  #about li:nth-of-type(16)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #4fff19;
+  }
+  #about li:nth-of-type(17)::before {
+    content: '#';
+    margin-right: .5em;
+    color: #23ddff;
+  }
+}
+
 #guidelines .container h3::before, #guidelines .container h3::after {
   color: #a023ff;
 }
 
-#guidelines .container > a {
+#guidelines .container .link-guidelines {
   text-align: center;
   display: inline-block;
   width: 15rem;
@@ -1161,11 +1313,11 @@ nav li a:hover, nav li a:focus {
   width: max-content;
 }
 
-#guidelines .container > a:hover, #guidelines .container > a:focus {
+#guidelines .container .link-guidelines:hover, #guidelines .container .link-guidelines:focus {
   color: #a023ff;
 }
 
-#guidelines .container > a::before {
+#guidelines .container .link-guidelines::before {
   position: absolute;
   content: '';
   background-color: #a023ff;
@@ -1175,7 +1327,7 @@ nav li a:hover, nav li a:focus {
   bottom: 0;
 }
 
-#guidelines .container > a::after {
+#guidelines .container .link-guidelines::after {
   position: absolute;
   content: '{}';
   font-size: 1.25em;
@@ -1184,6 +1336,12 @@ nav li a:hover, nav li a:focus {
   font-weight: 700;
   top: .45em;
   right: .65em;
+}
+
+@media (max-width: 950px) {
+  #guidelines .container .link-guidelines {
+    margin-top: 2em;
+  }
 }
 
 #contribute .container h3::before, #contribute .container h3::after {
@@ -1336,6 +1494,18 @@ nav li a:hover, nav li a:focus {
   }
 }
 
+@media (max-width: 450px) {
+  .profile .container li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile .container li span:last-of-type {
+    margin: 0.25em 0 1em;
+  }
+}
+
 .profile::after {
   content: '';
   position: absolute;
@@ -1343,16 +1513,36 @@ nav li a:hover, nav li a:focus {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff2828), color-stop(17%, #ff2828), color-stop(17%, transparent), color-stop(23%, transparent), color-stop(23%, #ff8400), color-stop(37%, #ff8400), color-stop(37%, transparent), color-stop(43%, transparent), color-stop(43%, #ffe21b), color-stop(57%, #ffe21b), color-stop(57%, transparent), color-stop(63%, transparent), color-stop(63%, #4fff19), color-stop(77%, #4fff19), color-stop(77%, transparent), color-stop(83%, transparent), color-stop(83%, #23ddff), to(#23ddff));
   background: linear-gradient(180deg, #ff2828 0%, #ff2828 17%, transparent 17%, transparent 23%, #ff8400 23%, #ff8400 37%, transparent 37%, transparent 43%, #ffe21b 43%, #ffe21b 57%, transparent 57%, transparent 63%, #4fff19 63%, #4fff19 77%, transparent 77%, transparent 83%, #23ddff 83%, #23ddff 100%);
   height: 30px;
-  width: 300px;
-  top: 30%;
-  right: -2%;
+  width: 400px;
+  top: 50%;
+  right: -5%;
   -webkit-transform: rotate(-65deg);
           transform: rotate(-65deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+@media (max-width: 950px) {
+  .profile::after {
+    right: -10%;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile::after {
+    right: -15%;
+  }
 }
 
 @media (max-width: 650px) {
   .profile::after {
     right: -20%;
+  }
+}
+
+@media (max-width: 450px) {
+  .profile::after {
+    right: -30%;
   }
 }
 

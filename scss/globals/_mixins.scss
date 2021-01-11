@@ -126,15 +126,34 @@
 		background: $orange;
 		background: $spectrum-mini;
 		height: 30px;
-		width: 300px;
-		top: 30%;
-		right: -2%;
+		width: 400px;
+		top: 50%;
+		right: -5%;
 		transform: rotate(-65deg);
+		transform-origin: center center;
+	}
+
+	@media (max-width: $large) {
+		&::after {
+			right: -10%;
+		}
+	}
+
+	@media (max-width: $medium-large) {
+		&::after {
+			right: -15%;
+		}
 	}
 
 	@media (max-width: $medium) {
 		&::after {
 			right: -20%;
+		}
+	}
+
+	@media (max-width: $small) {
+		&::after {
+			right: -30%;
 		}
 	}
 

@@ -7,10 +7,16 @@
 		}
 	}
 	
-	> a {
+	.link-guidelines {
 		text-align: center;
 		@include button($violet);
 		margin: 1em auto;
 		width: max-content;
+	}
+
+	@media (max-width: $large) {
+		.link-guidelines {
+			margin-top: 2em;
+		}
 	}
 }

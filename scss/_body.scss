@@ -39,6 +39,8 @@ body {
 		list-style: none;
 		padding: 0;
 	}
+
+	
 }
 
 @media (max-width: $large) {
@@ -46,11 +48,17 @@ body {
 		p,
 		ul,
 		ol {
-			margin: 0 1rem;
+			margin: 1.25rem 1rem 0;
 		}
+	}
+}
 
-		p {
-			margin-top: 1.25rem;
+@media (max-width: $medium) {
+	section.container {
+		p,
+		ul,
+		ol {
+			margin: 1.25rem 1.5rem 0;
 		}
 	}
 }

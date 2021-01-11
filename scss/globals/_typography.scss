@@ -23,6 +23,12 @@ main {
 		}
 	}
 
+	@media (max-width: $small) {
+		h2 {
+			font-size: 1.5rem;
+		}
+	}
+
 	h3 {
 		font-family: $plex-mono;
 		text-transform: lowercase;

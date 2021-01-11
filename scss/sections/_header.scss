@@ -36,6 +36,22 @@ header {
 		background: $spectrum;
 		@include text-clip;
 		margin-top: 1rem;
+
+		@media (max-width: $large) {
+			font-size: 6.5rem;
+		}
+	
+		@media (max-width: $medium-large) {
+			font-size: 5rem;
+		}
+	
+		@media (max-width: $medium) {
+			font-size: 4rem;
+		}
+	
+		@media (max-width: $small-medium) {
+			font-size: 3rem;
+		}
 	}
 
 	h2 {
@@ -45,6 +61,12 @@ header {
 
 		&::after {
 			content: '...'
+		}
+
+		@media (max-width: $medium) {
+			font-size: 1.125rem;
+			margin-left: 1rem;
+			margin-right: 1rem;
 		}
 	}
 

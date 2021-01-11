@@ -42,5 +42,17 @@
 		}
 	}
 
+	@media (max-width: $small) {
+		.container {
+			li {
+				flex-direction: column;
+
+				span:last-of-type {
+					margin: 0.25em 0 1em;
+				}
+			}
+		}
+	}
+
 	@include spectrum-spripe;
 }

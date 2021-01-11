@@ -7,7 +7,7 @@
 		
 		color: $darker-text;
 		margin: 2rem 0;
-		padding: 1rem 3.5rem 1.25rem;
+		padding: 0.75rem 3.5rem 1rem;
 
 		strong {
 			display: block;
@@ -42,11 +42,16 @@
 		blockquote {
 			margin: 2rem 1rem;
 		}
-	}
-	
-	@media (max-width: $large) {
+
 		ul {
 			margin-top: 1.25rem;
+			margin-left: 2rem;
+		}
+	}
+
+	@media (max-width: $small-medium) {
+		blockquote {
+			padding: 0.5rem 2rem 1.5rem;
 		}
 	}
 
@@ -98,6 +103,26 @@
 
 		&:nth-of-type(17) {
 			@include ul-bullet($yellow);
+		}
+
+		@media (max-width: $medium) {
+			&:nth-of-type(1) 	{ @include ul-bullet($red); 		}
+			&:nth-of-type(2) 	{ @include ul-bullet($orange); 	}
+			&:nth-of-type(3) 	{ @include ul-bullet($yellow); 	}
+			&:nth-of-type(4) 	{ @include ul-bullet($green); 	}
+			&:nth-of-type(5) 	{ @include ul-bullet($blue); 		}
+			&:nth-of-type(6) 	{ @include ul-bullet($violet); 	}
+			&:nth-of-type(7) 	{ @include ul-bullet($red); 		}
+			&:nth-of-type(8) 	{ @include ul-bullet($orange); 	}
+			&:nth-of-type(9) 	{ @include ul-bullet($yellow); 	}
+			&:nth-of-type(10) { @include ul-bullet($green); 	}
+			&:nth-of-type(11) { @include ul-bullet($blue); 		}
+			&:nth-of-type(12) { @include ul-bullet($violet); 	}
+			&:nth-of-type(13) { @include ul-bullet($red); 		}
+			&:nth-of-type(14) { @include ul-bullet($orange); 	}
+			&:nth-of-type(15) { @include ul-bullet($yellow); 	}
+			&:nth-of-type(16) { @include ul-bullet($green); 	}
+			&:nth-of-type(17) { @include ul-bullet($blue); 		}
 		}
 	}
 }
