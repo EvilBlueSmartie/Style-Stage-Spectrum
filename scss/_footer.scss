@@ -10,7 +10,7 @@
 	.link-downloadcss,
 	.link-downloadhtml,
 	.link-codepen {
-		@include button($red, $orange, $yellow);
+		@include button($green);
 	}
 }
 

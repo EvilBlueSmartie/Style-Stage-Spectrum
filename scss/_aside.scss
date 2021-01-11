@@ -13,6 +13,7 @@ aside {
 	.container {
 		width: max-content;
 		text-align: center;
+		font-size: 1em;
 
 		h4 {
 			font-size: 1.3750rem;
@@ -29,5 +30,12 @@ aside {
 
 	.container {
 		text-align: center;
+
+		> a {
+			text-align: center;
+			@include button($blue);
+			margin: 1em auto;
+			width: max-content;
+		}
 	}
 }

@@ -12,7 +12,7 @@
 	-webkit-text-fill-color: transparent;
 }
 
-@mixin button($colour1, $colour2, $colour3) {
+@mixin button($colour) {
 	display: inline-block;
 	width: 15rem;
 	background-color: $background-lighter;
@@ -32,20 +32,9 @@
 		color: $violet;
 	}
 
-	&:first-of-type {
-		@include button-accent($colour1);
-		@include button-braces($colour1)
-	}
 
-	&:nth-of-type(2) {
-		@include button-accent($colour2);
-		@include button-braces($colour2)
-	}
-
-	&:last-of-type {
-		@include button-accent($colour3);
-		@include button-braces($colour3)
-	}
+	@include button-accent($colour);
+	@include button-braces($colour)
 }
 
 @mixin button-accent($colour) {

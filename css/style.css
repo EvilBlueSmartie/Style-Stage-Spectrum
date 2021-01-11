@@ -669,8 +669,25 @@ main h2::after {
 }
 
 main h3 {
+  font-family: "IBM PLex Mono", sans-serif;
+  text-transform: lowercase;
+  font-size: 1.5rem;
   text-align: center;
-  font-size: 1.25rem;
+}
+
+main h3::before {
+  content: '{';
+}
+
+main h3::after {
+  content: '}';
+}
+
+main h3::before, main h3::after {
+  margin: 0 0.5em;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #4fff19;
 }
 
 main p {
@@ -679,11 +696,12 @@ main p {
 
 main blockquote {
   position: relative;
+  background: #0f0f0f;
   border-radius: 0.3125rem;
   font-family: "IBM PLex Mono", sans-serif;
   color: #bababa;
   margin: 2rem 0;
-  padding: 1rem 3.5rem;
+  padding: 1rem 3.5rem 1.25rem;
 }
 
 main blockquote strong {
@@ -713,24 +731,7 @@ main blockquote::before, main blockquote::after {
   color: #4fff19;
 }
 
-main #guidelines .container h3 {
-  font-family: "IBM PLex Mono", sans-serif;
-  text-transform: lowercase;
-  font-size: 1.5rem;
-}
-
-main #guidelines .container h3::before {
-  content: '{';
-}
-
-main #guidelines .container h3::after {
-  content: '}';
-}
-
 main #guidelines .container h3::before, main #guidelines .container h3::after {
-  margin: 0 0.5em;
-  font-size: 1.25em;
-  font-weight: 700;
   color: #a023ff;
 }
 
@@ -750,6 +751,8 @@ main #guidelines .container > a {
   outline: none;
   -webkit-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
+  position: relative;
+  overflow: hidden;
   margin: 1em auto;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -760,12 +763,7 @@ main #guidelines .container > a:hover, main #guidelines .container > a:focus {
   color: #a023ff;
 }
 
-main #guidelines .container > a:first-of-type {
-  position: relative;
-  overflow: hidden;
-}
-
-main #guidelines .container > a:first-of-type::before {
+main #guidelines .container > a::before {
   position: absolute;
   content: '';
   background-color: #a023ff;
@@ -775,7 +773,7 @@ main #guidelines .container > a:first-of-type::before {
   bottom: 0;
 }
 
-main #guidelines .container > a:first-of-type::after {
+main #guidelines .container > a::after {
   position: absolute;
   content: '{}';
   font-size: 1.25em;
@@ -786,56 +784,8 @@ main #guidelines .container > a:first-of-type::after {
   right: .65em;
 }
 
-main #guidelines .container > a:nth-of-type(2) {
-  position: relative;
-  overflow: hidden;
-}
-
-main #guidelines .container > a:nth-of-type(2)::before {
-  position: absolute;
-  content: '';
-  background-color: #a023ff;
-  width: 0.6250rem;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-
-main #guidelines .container > a:nth-of-type(2)::after {
-  position: absolute;
-  content: '{}';
-  font-size: 1.25em;
-  color: #a023ff;
-  margin-left: .5em;
-  font-weight: 700;
-  top: .45em;
-  right: .65em;
-}
-
-main #guidelines .container > a:last-of-type {
-  position: relative;
-  overflow: hidden;
-}
-
-main #guidelines .container > a:last-of-type::before {
-  position: absolute;
-  content: '';
-  background-color: #a023ff;
-  width: 0.6250rem;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-
-main #guidelines .container > a:last-of-type::after {
-  position: absolute;
-  content: '{}';
-  font-size: 1.25em;
-  color: #a023ff;
-  margin-left: .5em;
-  font-weight: 700;
-  top: .45em;
-  right: .65em;
+main #contribute .container h3::before, main #contribute .container h3::after {
+  color: #4fff19;
 }
 
 section.container {
@@ -1070,6 +1020,7 @@ aside {
   width: -moz-max-content;
   width: max-content;
   text-align: center;
+  font-size: 1em;
 }
 
 .profile .container h4 {
@@ -1100,6 +1051,55 @@ aside {
   text-align: center;
 }
 
+#styles .container > a {
+  text-align: center;
+  display: inline-block;
+  width: 15rem;
+  background-color: #0f0f0f;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8750rem;
+  color: #f5f5f5;
+  letter-spacing: .125em;
+  padding: 0.75em 2.65em;
+  border-radius: 0.3125rem;
+  outline: none;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+  position: relative;
+  overflow: hidden;
+  margin: 1em auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+#styles .container > a:hover, #styles .container > a:focus {
+  color: #a023ff;
+}
+
+#styles .container > a::before {
+  position: absolute;
+  content: '';
+  background-color: #23ddff;
+  width: 0.6250rem;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#styles .container > a::after {
+  position: absolute;
+  content: '{}';
+  font-size: 1.25em;
+  color: #23ddff;
+  margin-left: .5em;
+  font-weight: 700;
+  top: .45em;
+  right: .65em;
+}
+
 #files {
   text-align: center;
   margin-bottom: 2rem;
@@ -1126,6 +1126,8 @@ aside {
   outline: none;
   -webkit-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 #files .link-downloadcss:hover, #files .link-downloadcss:focus,
@@ -1136,96 +1138,25 @@ aside {
   color: #a023ff;
 }
 
-#files .link-downloadcss:first-of-type,
-#files .link-downloadhtml:first-of-type,
-#files .link-codepen:first-of-type {
-  position: relative;
-  overflow: hidden;
-}
-
-#files .link-downloadcss:first-of-type::before,
-#files .link-downloadhtml:first-of-type::before,
-#files .link-codepen:first-of-type::before {
+#files .link-downloadcss::before,
+#files .link-downloadhtml::before,
+#files .link-codepen::before {
   position: absolute;
   content: '';
-  background-color: #ff2828;
+  background-color: #4fff19;
   width: 0.6250rem;
   top: 0;
   left: 0;
   bottom: 0;
 }
 
-#files .link-downloadcss:first-of-type::after,
-#files .link-downloadhtml:first-of-type::after,
-#files .link-codepen:first-of-type::after {
+#files .link-downloadcss::after,
+#files .link-downloadhtml::after,
+#files .link-codepen::after {
   position: absolute;
   content: '{}';
   font-size: 1.25em;
-  color: #ff2828;
-  margin-left: .5em;
-  font-weight: 700;
-  top: .45em;
-  right: .65em;
-}
-
-#files .link-downloadcss:nth-of-type(2),
-#files .link-downloadhtml:nth-of-type(2),
-#files .link-codepen:nth-of-type(2) {
-  position: relative;
-  overflow: hidden;
-}
-
-#files .link-downloadcss:nth-of-type(2)::before,
-#files .link-downloadhtml:nth-of-type(2)::before,
-#files .link-codepen:nth-of-type(2)::before {
-  position: absolute;
-  content: '';
-  background-color: #ff8400;
-  width: 0.6250rem;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-
-#files .link-downloadcss:nth-of-type(2)::after,
-#files .link-downloadhtml:nth-of-type(2)::after,
-#files .link-codepen:nth-of-type(2)::after {
-  position: absolute;
-  content: '{}';
-  font-size: 1.25em;
-  color: #ff8400;
-  margin-left: .5em;
-  font-weight: 700;
-  top: .45em;
-  right: .65em;
-}
-
-#files .link-downloadcss:last-of-type,
-#files .link-downloadhtml:last-of-type,
-#files .link-codepen:last-of-type {
-  position: relative;
-  overflow: hidden;
-}
-
-#files .link-downloadcss:last-of-type::before,
-#files .link-downloadhtml:last-of-type::before,
-#files .link-codepen:last-of-type::before {
-  position: absolute;
-  content: '';
-  background-color: #ffe21b;
-  width: 0.6250rem;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-
-#files .link-downloadcss:last-of-type::after,
-#files .link-downloadhtml:last-of-type::after,
-#files .link-codepen:last-of-type::after {
-  position: absolute;
-  content: '{}';
-  font-size: 1.25em;
-  color: #ffe21b;
+  color: #4fff19;
   margin-left: .5em;
   font-weight: 700;
   top: .45em;
@@ -1442,9 +1373,25 @@ ul {
   color: #ffe21b;
 }
 
+#contribute section.container:last-of-type ol {
+  counter-reset: listCounter;
+  list-style: none;
+}
+
 #contribute section.container:last-of-type li {
-  padding-right: 3em;
-  padding-bottom: 1em;
+  position: relative;
+  padding: 1em 2em;
+  font-family: "IBM PLex Mono", sans-serif;
+}
+
+#contribute section.container:last-of-type li::before {
+  position: absolute;
+  left: 0;
+  counter-increment: listCounter;
+  content: counter(listCounter) ":";
+  font-family: "IBM PLex Mono", sans-serif;
+  font-weight: 700;
+  color: #4fff19;
 }
 
 .profile .container li {
@@ -1473,57 +1420,13 @@ ul {
 #styles .container ul li {
   background-color: #0f0f0f;
   border-radius: 0.3125rem;
-  width: 14em;
-  height: 5em;
+  width: 15rem;
+  height: 7em;
   margin: 0.5rem;
 }
 
-#styles .container ul li:first-of-type {
-  position: relative;
-  overflow: hidden;
-}
-
-#styles .container ul li:first-of-type::before {
-  position: absolute;
-  content: '';
-  background-color: #4fff19;
-  width: 0.6250rem;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-
-#styles .container ul li:nth-of-type(2) {
-  position: relative;
-  overflow: hidden;
-}
-
-#styles .container ul li:nth-of-type(2)::before {
-  position: absolute;
-  content: '';
-  background-color: #23ddff;
-  width: 0.6250rem;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-
-#styles .container ul li:last-of-type {
-  position: relative;
-  overflow: hidden;
-}
-
-#styles .container ul li:last-of-type::before {
-  position: absolute;
-  content: '';
-  background-color: #a023ff;
-  width: 0.6250rem;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-
 #styles .container ul li > span {
+  position: relative;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1539,6 +1442,36 @@ ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem 1.5rem;
+  font-family: "IBM PLex Mono", sans-serif;
+}
+
+#styles .container ul li > span a {
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+#styles .container ul li > span a + span {
+  font-size: 0.85rem;
+}
+
+#styles .container ul li > span::before {
+  content: '{';
+  top: 0.2em;
+  left: 0.25em;
+}
+
+#styles .container ul li > span::after {
+  content: '}';
+  bottom: 0.2em;
+  right: 0.25em;
+}
+
+#styles .container ul li > span::before, #styles .container ul li > span::after {
+  position: absolute;
+  margin: 0;
+  font-size: 1.75em;
+  font-weight: 700;
+  color: #23ddff;
 }
 
 *,
@@ -1550,5 +1483,22 @@ ul {
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    -webkit-animation-delay: -1ms !important;
+            animation-delay: -1ms !important;
+    -webkit-animation-duration: 1ms !important;
+            animation-duration: 1ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    -webkit-transition-duration: 0s !important;
+            transition-duration: 0s !important;
+    -webkit-transition-delay: 0s !important;
+            transition-delay: 0s !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -25,8 +25,26 @@ main {
 	}
 
 	h3 {
+		font-family: $plex-mono;
+		text-transform: lowercase;
+		font-size: 1.5rem;
 		text-align: center;
-		font-size: 1.25rem;
+
+		&::before {
+			content: '{';
+		}
+
+		&::after {
+			content: '}';
+		}
+
+		&::before,
+		&::after {
+			margin: 0 0.5em;
+			font-size: 1.25em;
+			font-weight: 700;
+			color: $green;
+		}
 	}
 
 	p {
@@ -35,13 +53,13 @@ main {
 	
 	blockquote {
 		position: relative;
-		// background: $background-lighter;
+		background: $background-lighter;
 		border-radius: $border-radius;
 		font-family: $plex-mono;
 		
 		color: $darker-text;
 		margin: 2rem 0;
-		padding: 1rem 3.5rem;
+		padding: 1rem 3.5rem 1.25rem;
 
 		strong {
 			display: block;
@@ -70,39 +88,31 @@ main {
 			font-weight: 700;
 			color: $green;
 		}
-
-		// TODO: Tart this up a bit.
 	}
 	
 	// 'Review Guidelines' button.
 	#guidelines .container {
 		h3 {
-			font-family: $plex-mono;
-			text-transform: lowercase;
-			font-size: 1.5rem;
-
-			&::before {
-				content: '{';
-			}
-
-			&::after {
-				content: '}';
-			}
-
 			&::before,
 			&::after {
-				margin: 0 0.5em;
-				font-size: 1.25em;
-				font-weight: 700;
 				color: $violet;
 			}
 		}
 		
 		> a {
 			text-align: center;
-			@include button($violet, $violet, $violet);
+			@include button($violet);
 			margin: 1em auto;
 			width: max-content;
+		}
+	}
+
+	#contribute .container {
+		h3 {
+			&::before,
+			&::after {
+				color: $green;
+			}
 		}
 	}
 }
