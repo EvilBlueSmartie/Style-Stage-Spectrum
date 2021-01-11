@@ -471,14 +471,14 @@ body aside {
 }
 
 body a {
-  color: #ff8400;
+  color: #b24eff;
   outline: none;
   -webkit-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
 }
 
 body a:hover, body a:focus {
-  color: #a023ff;
+  color: #b24eff;
 }
 
 body ul {
@@ -934,7 +934,7 @@ header .link-github:hover, header .link-github:focus {
 }
 
 header .link-github:hover svg, header .link-github:focus svg {
-  fill: #a023ff;
+  fill: #b24eff;
 }
 
 nav {
@@ -1051,7 +1051,7 @@ nav li:nth-of-type(5) a:focus::after {
 nav li:nth-of-type(6) a::after {
   content: '';
   position: absolute;
-  background-color: #a023ff;
+  background-color: #b24eff;
   height: 0.5rem;
   left: 0;
   top: 1.25rem;
@@ -1175,7 +1175,7 @@ nav li a:hover, nav li a:focus {
 #about li:nth-of-type(11)::before, #about li:nth-of-type(12)::before {
   content: '#';
   margin-right: .5em;
-  color: #a023ff;
+  color: #b24eff;
 }
 
 #about li:nth-of-type(13)::before, #about li:nth-of-type(14)::before {
@@ -1225,7 +1225,7 @@ nav li a:hover, nav li a:focus {
   #about li:nth-of-type(6)::before {
     content: '#';
     margin-right: .5em;
-    color: #a023ff;
+    color: #b24eff;
   }
   #about li:nth-of-type(7)::before {
     content: '#';
@@ -1255,7 +1255,7 @@ nav li a:hover, nav li a:focus {
   #about li:nth-of-type(12)::before {
     content: '#';
     margin-right: .5em;
-    color: #a023ff;
+    color: #b24eff;
   }
   #about li:nth-of-type(13)::before {
     content: '#';
@@ -1285,7 +1285,7 @@ nav li a:hover, nav li a:focus {
 }
 
 #guidelines .container h3::before, #guidelines .container h3::after {
-  color: #a023ff;
+  color: #b24eff;
 }
 
 #guidelines .container .link-guidelines {
@@ -1314,13 +1314,13 @@ nav li a:hover, nav li a:focus {
 }
 
 #guidelines .container .link-guidelines:hover, #guidelines .container .link-guidelines:focus {
-  color: #a023ff;
+  color: #b24eff;
 }
 
 #guidelines .container .link-guidelines::before {
   position: absolute;
   content: '';
-  background-color: #a023ff;
+  background-color: #b24eff;
   width: 0.6250rem;
   top: 0;
   left: 0;
@@ -1331,7 +1331,7 @@ nav li a:hover, nav li a:focus {
   position: absolute;
   content: '{}';
   font-size: 1.25em;
-  color: #a023ff;
+  color: #b24eff;
   margin-left: .5em;
   font-weight: 700;
   top: .45em;
@@ -1405,7 +1405,7 @@ nav li a:hover, nav li a:focus {
 #files .link-downloadhtml:focus,
 #files .link-codepen:hover,
 #files .link-codepen:focus {
-  color: #a023ff;
+  color: #b24eff;
 }
 
 #files .link-downloadcss::before,
@@ -1580,7 +1580,7 @@ nav li a:hover, nav li a:focus {
 }
 
 #styles .container > a:hover, #styles .container > a:focus {
-  color: #a023ff;
+  color: #b24eff;
 }
 
 #styles .container > a::before {

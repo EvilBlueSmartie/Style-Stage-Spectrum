@@ -16,7 +16,6 @@
 
 @import 'body';
 @import 'grids';
-@import 'scrollbar';
 
 @import './sections/header';
 @import './sections/nav';
@@ -48,8 +47,3 @@ html {
 		transition-delay: 0s !important;
 	}
 }
-
-
-// TODO: Scrollbar styling.
-
-// TODO: Responsive stuff. Learn SASS breakpoints.
