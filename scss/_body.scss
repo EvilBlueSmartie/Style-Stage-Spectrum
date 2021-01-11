@@ -25,13 +25,14 @@ body {
 	}
 
 	a {
-		color: $violet;
+		color: $orange;
 		outline: none;
 		transition: 150ms ease-in-out;
 
 		&:hover,
 		&:focus {
 			color: $violet;
+
 		}
 	}
 
