@@ -1,0 +1,68 @@
+
+#styles {
+	margin: 2rem 0;
+
+	.container {
+		text-align: center;
+
+		> a {
+			text-align: center;
+			@include button($blue);
+			margin: 1em auto;
+			width: max-content;
+		}
+
+		ul {
+			display: flex;
+	
+			li {
+				background-color: $background-lighter;
+				border-radius: $border-radius;
+				width: 15rem;
+				height: 7em;
+				margin: 0.5rem;
+			
+				> span {
+					position: relative;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-between;
+					padding: 1rem 1.5rem;
+					font-family: $plex-mono;
+	
+					a {
+						text-decoration: none;
+						font-size: 1.25rem;
+	
+						+ span {
+							font-size: 0.85rem;
+						}
+					}
+	
+					&::before {
+						content: '{';
+						top: 0.2em;
+						left: 0.25em;
+					}
+			
+					&::after {
+						content: '}';
+						bottom: 0.2em;
+						right: 0.25em;
+					}
+			
+					&::before,
+					&::after {
+						position: absolute;
+						margin: 0;
+						font-size: 1.75em;
+						font-weight: 700;
+						color: $blue;
+					}
+				}
+			}
+		}
+	}
+}

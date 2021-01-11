@@ -1,0 +1,16 @@
+
+#guidelines .container {
+	h3 {
+		&::before,
+		&::after {
+			color: $violet;
+		}
+	}
+	
+	> a {
+		text-align: center;
+		@include button($violet);
+		margin: 1em auto;
+		width: max-content;
+	}
+}

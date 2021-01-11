@@ -1,9 +1,4 @@
 
-aside {
-	display: flex;
-	justify-content: center;
-}
-
 .profile {
 	position: relative;
 	background-color: $background-lighter;
@@ -20,22 +15,20 @@ aside {
 			margin-top: 0;
 			margin-bottom: 1.5rem;
 		}
+
+		li {
+			display: flex;
+			justify-content: space-between;
+	
+			span:first-of-type {
+				font-weight: 700;
+			}
+	
+			span + span {
+				margin-left: 1rem;
+			}
+		}
 	}
 
 	@include spectrum-spripe;
-}
-
-#styles {
-	margin: 2rem 0;
-
-	.container {
-		text-align: center;
-
-		> a {
-			text-align: center;
-			@include button($blue);
-			margin: 1em auto;
-			width: max-content;
-		}
-	}
 }

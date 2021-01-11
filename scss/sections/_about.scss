@@ -1,0 +1,91 @@
+#about {
+	blockquote {
+		position: relative;
+		background: $background-lighter;
+		border-radius: $border-radius;
+		font-family: $plex-mono;
+		
+		color: $darker-text;
+		margin: 2rem 0;
+		padding: 1rem 3.5rem 1.25rem;
+
+		strong {
+			display: block;
+			font-size: 1.125rem;
+			color: $main-text;
+			margin-bottom: 0.5em;
+		}
+		
+		&::before {
+			content: '{';
+			top: 0.1em;
+			left: 0.25em;
+		}
+
+		&::after {
+			content: '}';
+			bottom: 0.1em;
+			right: 0.25em;
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			margin: 0;
+			font-size: 2.5em;
+			font-weight: 700;
+			color: $green;
+		}
+	}
+	
+	li {
+		text-transform: lowercase;
+		font-family: $plex-mono;
+
+		@include ul-bullet(pink);
+
+		&:nth-of-type(1),
+		&:nth-of-type(2) {
+			@include ul-bullet($red);
+		}
+
+		&:nth-of-type(3),
+		&:nth-of-type(4) {
+			@include ul-bullet($orange);
+		}
+
+		&:nth-of-type(5),
+		&:nth-of-type(6) {
+			@include ul-bullet($yellow);
+		}
+
+		&:nth-of-type(7),
+		&:nth-of-type(8) {
+			@include ul-bullet($green);
+		}
+
+		&:nth-of-type(9),
+		&:nth-of-type(10) {
+			@include ul-bullet($blue);
+		}
+
+		&:nth-of-type(11),
+		&:nth-of-type(12) {
+			@include ul-bullet($violet);
+		}
+
+		&:nth-of-type(13),
+		&:nth-of-type(14) {
+			@include ul-bullet($red);
+		}
+
+		&:nth-of-type(15),
+		&:nth-of-type(16) {
+			@include ul-bullet($orange);
+		}
+
+		&:nth-of-type(17) {
+			@include ul-bullet($yellow);
+		}
+	}
+}

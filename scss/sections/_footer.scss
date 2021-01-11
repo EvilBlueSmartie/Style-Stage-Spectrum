@@ -1,19 +1,4 @@
 
-#files {
-	text-align: center;
-	margin-bottom: 2rem;
-
-	a + a {
-		margin-left: 0.5rem;
-	}
-
-	.link-downloadcss,
-	.link-downloadhtml,
-	.link-codepen {
-		@include button($green);
-	}
-}
-
 .page-footer {
 	background-color: $background-lighter;
 	text-align: center;
@@ -84,8 +69,6 @@
 				@include nav-underline($green);
 				@include correct-underline;
 			}
-
-			
 		}
 	}
 }

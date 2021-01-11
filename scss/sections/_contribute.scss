@@ -1,0 +1,49 @@
+
+#contribute {
+	.container {
+		h3 {
+			&::before,
+			&::after {
+				color: $green;
+			}
+		}
+	}
+
+	section.container:last-of-type {
+		ol {
+			counter-reset: listCounter;
+			list-style: none;
+		}
+	
+		li {
+			position: relative;
+			padding: 1em 2em;
+			font-family: $plex-mono;
+	
+			&::before {
+				position: absolute;
+				left: 0;
+				counter-increment: listCounter;
+				content: counter(listCounter) ':';
+				font-family: $plex-mono;
+				font-weight: 700;
+				color: $green;
+			}
+		}
+	}
+}
+
+#files {
+	text-align: center;
+	margin-bottom: 2rem;
+
+	a + a {
+		margin-left: 0.5rem;
+	}
+
+	.link-downloadcss,
+	.link-downloadhtml,
+	.link-codepen {
+		@include button($green);
+	}
+}
