@@ -20,6 +20,7 @@
 	text-decoration: none;
 	font-weight: 700;
 	font-size: 0.8750rem;
+	line-height: 1.6;
 	color: $main-text;
 	letter-spacing: .125em;
 	padding: 0.75em 2.65em;
@@ -31,7 +32,6 @@
 	&:focus {
 		color: $violet;
 	}
-
 
 	@include button-accent($colour);
 	@include button-braces($colour)
@@ -126,10 +126,16 @@
 		background: $orange;
 		background: $spectrum-mini;
 		height: 30px;
-		width: 250px;
+		width: 300px;
 		top: 30%;
 		right: -2%;
 		transform: rotate(-65deg);
+	}
+
+	@media (max-width: $medium) {
+		&::after {
+			right: -20%;
+		}
 	}
 
 	overflow: hidden;

@@ -40,3 +40,17 @@ body {
 		padding: 0;
 	}
 }
+
+@media (max-width: $large) {
+	section.container {
+		p,
+		ul,
+		ol {
+			margin: 0 1rem;
+		}
+
+		p {
+			margin-top: 1.25rem;
+		}
+	}
+}

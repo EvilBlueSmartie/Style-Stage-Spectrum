@@ -363,11 +363,25 @@ main h2::after {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff2828), color-stop(17%, #ff2828), color-stop(17%, transparent), color-stop(23%, transparent), color-stop(23%, #ff8400), color-stop(37%, #ff8400), color-stop(37%, transparent), color-stop(43%, transparent), color-stop(43%, #ffe21b), color-stop(57%, #ffe21b), color-stop(57%, transparent), color-stop(63%, transparent), color-stop(63%, #4fff19), color-stop(77%, #4fff19), color-stop(77%, transparent), color-stop(83%, transparent), color-stop(83%, #23ddff), to(#23ddff));
   background: linear-gradient(180deg, #ff2828 0%, #ff2828 17%, transparent 17%, transparent 23%, #ff8400 23%, #ff8400 37%, transparent 37%, transparent 43%, #ffe21b 43%, #ffe21b 57%, transparent 57%, transparent 63%, #4fff19 63%, #4fff19 77%, transparent 77%, transparent 83%, #23ddff 83%, #23ddff 100%);
   height: 30px;
-  width: 250px;
+  width: 300px;
   top: 30%;
   right: -2%;
   -webkit-transform: rotate(-65deg);
           transform: rotate(-65deg);
+}
+
+@media (max-width: 650px) {
+  main h2::after {
+    right: -20%;
+  }
+}
+
+@media (max-width: 650px) {
+  main h2 {
+    font-size: 2rem;
+    text-align: left;
+    padding-left: 1rem;
+  }
 }
 
 main h3 {
@@ -446,6 +460,17 @@ body ul {
   padding: 0;
 }
 
+@media (max-width: 950px) {
+  section.container p,
+  section.container ul,
+  section.container ol {
+    margin: 0 1rem;
+  }
+  section.container p {
+    margin-top: 1.25rem;
+  }
+}
+
 section.container {
   display: -ms-grid;
   display: grid;
@@ -467,6 +492,19 @@ section.container blockquote {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
+}
+
+@media (max-width: 950px) {
+  section.container {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  section.container h3,
+  section.container a,
+  section.container p,
+  section.container blockquote {
+    grid-column: 1 / -1;
+  }
 }
 
 #about section.container:first-of-type {
@@ -550,6 +588,21 @@ section.container blockquote {
   grid-column: 2 / 3;
 }
 
+@media (max-width: 650px) {
+  #about section.container:last-of-type ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about section.container:last-of-type ul li {
+    margin-left: 2rem;
+  }
+}
+
 #about section.container:last-of-type p:nth-of-type(3) {
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
@@ -566,6 +619,38 @@ section.container blockquote {
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   grid-row: 5 / 6;
+}
+
+@media (max-width: 950px) {
+  #about section.container:last-of-type {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (max-content)[6];
+        grid-template-rows: repeat(6, -webkit-max-content);
+        grid-template-rows: repeat(6, max-content);
+  }
+  #about section.container:last-of-type ul,
+  #about section.container:last-of-type p:first-of-type,
+  #about section.container:last-of-type p:nth-of-type(2),
+  #about section.container:last-of-type p:nth-of-type(3),
+  #about section.container:last-of-type p:last-of-type {
+    grid-column: 1 / -1;
+  }
+  #about section.container:last-of-type ul {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  #about section.container:last-of-type p:nth-of-type(3) {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  #about section.container:last-of-type p:last-of-type {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6 / 7;
+  }
 }
 
 #guidelines section.container {
@@ -654,6 +739,19 @@ section.container blockquote {
       grid-template-rows: repeat(2, max-content);
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 950px) {
+  #contribute section.container:last-of-type ol {
+    grid-column: 1 / -1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .skip-link {
@@ -791,6 +889,8 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   -webkit-box-pack: center;
@@ -800,7 +900,7 @@ nav ul {
 
 nav li {
   position: relative;
-  margin: 0.25rem;
+  margin: 1rem 0.25rem;
 }
 
 nav li:first-of-type a::after {
@@ -955,6 +1055,18 @@ nav li a:hover, nav li a:focus {
   color: #4fff19;
 }
 
+@media (max-width: 950px) {
+  #about blockquote {
+    margin: 2rem 1rem;
+  }
+}
+
+@media (max-width: 950px) {
+  #about ul {
+    margin-top: 1.25rem;
+  }
+}
+
 #about li {
   text-transform: lowercase;
   font-family: "IBM PLex Mono", sans-serif;
@@ -1033,6 +1145,7 @@ nav li a:hover, nav li a:focus {
   text-decoration: none;
   font-weight: 700;
   font-size: 0.8750rem;
+  line-height: 1.6;
   color: #f5f5f5;
   letter-spacing: .125em;
   padding: 0.75em 2.65em;
@@ -1117,6 +1230,7 @@ nav li a:hover, nav li a:focus {
   text-decoration: none;
   font-weight: 700;
   font-size: 0.8750rem;
+  line-height: 1.6;
   color: #f5f5f5;
   letter-spacing: .125em;
   padding: 0.75em 2.65em;
@@ -1161,6 +1275,15 @@ nav li a:hover, nav li a:focus {
   right: .65em;
 }
 
+@media (max-width: 800px) {
+  #files .link-downloadcss,
+  #files .link-downloadhtml,
+  #files .link-codepen {
+    display: block;
+    margin: 0.5rem auto;
+  }
+}
+
 .profile {
   position: relative;
   background-color: #0f0f0f;
@@ -1200,6 +1323,19 @@ nav li a:hover, nav li a:focus {
   margin-left: 1rem;
 }
 
+@media (max-width: 650px) {
+  .profile .container {
+    text-align: left;
+    width: 100%;
+    margin-left: 1rem;
+  }
+  .profile .container li {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .profile::after {
   content: '';
   position: absolute;
@@ -1207,11 +1343,17 @@ nav li a:hover, nav li a:focus {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff2828), color-stop(17%, #ff2828), color-stop(17%, transparent), color-stop(23%, transparent), color-stop(23%, #ff8400), color-stop(37%, #ff8400), color-stop(37%, transparent), color-stop(43%, transparent), color-stop(43%, #ffe21b), color-stop(57%, #ffe21b), color-stop(57%, transparent), color-stop(63%, transparent), color-stop(63%, #4fff19), color-stop(77%, #4fff19), color-stop(77%, transparent), color-stop(83%, transparent), color-stop(83%, #23ddff), to(#23ddff));
   background: linear-gradient(180deg, #ff2828 0%, #ff2828 17%, transparent 17%, transparent 23%, #ff8400 23%, #ff8400 37%, transparent 37%, transparent 43%, #ffe21b 43%, #ffe21b 57%, transparent 57%, transparent 63%, #4fff19 63%, #4fff19 77%, transparent 77%, transparent 83%, #23ddff 83%, #23ddff 100%);
   height: 30px;
-  width: 250px;
+  width: 300px;
   top: 30%;
   right: -2%;
   -webkit-transform: rotate(-65deg);
           transform: rotate(-65deg);
+}
+
+@media (max-width: 650px) {
+  .profile::after {
+    right: -20%;
+  }
 }
 
 #styles {
@@ -1231,6 +1373,7 @@ nav li a:hover, nav li a:focus {
   text-decoration: none;
   font-weight: 700;
   font-size: 0.8750rem;
+  line-height: 1.6;
   color: #f5f5f5;
   letter-spacing: .125em;
   padding: 0.75em 2.65em;
@@ -1334,6 +1477,21 @@ nav li a:hover, nav li a:focus {
   color: #23ddff;
 }
 
+@media (max-width: 800px) {
+  #styles .container ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #styles .container ul li {
+    width: 70vw;
+  }
+}
+
 .page-footer {
   background-color: #0f0f0f;
   text-align: center;
@@ -1348,6 +1506,8 @@ nav li a:hover, nav li a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

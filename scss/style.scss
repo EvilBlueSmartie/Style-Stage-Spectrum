@@ -1,6 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=IBM+Plex+Mono:wght@300;400;700&family=IBM+Plex+Sans:wght@300;400;700	&display=swap');
 
+
+// Fonts					Weights
+// -----------------------------
+// Arvo 					700
+// IBM Plex Sans  	300 400 700
+// IBM Plex Mono  	300 400 700
+
+
 @import './globals/normalize';
 @import './globals/variables';
 @import './globals/mixins';
@@ -8,6 +16,7 @@
 
 @import 'body';
 @import 'grids';
+@import 'scrollbar';
 
 @import './sections/header';
 @import './sections/nav';
@@ -17,8 +26,6 @@
 @import './sections/current-style';
 @import './sections/featured-styles';
 @import './sections/footer';
-
-
 
 *,
 *::before,

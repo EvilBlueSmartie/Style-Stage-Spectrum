@@ -37,7 +37,19 @@
 			color: $green;
 		}
 	}
+
+	@media (max-width: $large) {
+		blockquote {
+			margin: 2rem 1rem;
+		}
+	}
 	
+	@media (max-width: $large) {
+		ul {
+			margin-top: 1.25rem;
+		}
+	}
+
 	li {
 		text-transform: lowercase;
 		font-family: $plex-mono;

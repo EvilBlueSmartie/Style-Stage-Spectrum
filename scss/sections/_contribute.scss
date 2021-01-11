@@ -46,4 +46,13 @@
 	.link-codepen {
 		@include button($green);
 	}
+
+	@media (max-width: $medium-large) {
+		.link-downloadcss,
+		.link-downloadhtml,
+		.link-codepen {
+			display: block;
+			margin: 0.5rem auto;
+		}
+	}
 }

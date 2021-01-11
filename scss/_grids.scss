@@ -16,7 +16,21 @@ section.container {
 	}
 }
 
+@media (max-width: $large) {
+	section.container {
+		grid-template-columns: 100%;
+
+		h3,
+		a,
+		p,
+		blockquote {
+			grid-column: 1 / -1;
+		}
+	}
+}
+
 #about {
+	// Setting the Stage
 	section.container:first-of-type {
 		grid-template-rows: repeat(5, max-content);
 
@@ -37,6 +51,7 @@ section.container {
 		}
 	}
 
+	// Modern CSS Under the Spotlight
 	section.container:last-of-type {
 		grid-template-columns: 1fr repeat(3, ($content-width / 3)) 1fr;
 		grid-template-rows: repeat(5, max-content);
@@ -65,6 +80,19 @@ section.container {
 			li:nth-of-type(2n) {
 				grid-column: 2 / 3;
 			}
+
+
+		}
+
+		@media (max-width: $medium) {
+			ul {
+				display: flex;
+				flex-direction: column;
+
+				li {
+					margin-left: 2rem;
+				}
+			}
 		}
 
 		p:nth-of-type(3) {
@@ -75,6 +103,33 @@ section.container {
 		p:last-of-type {
 			grid-column: 2/ 5;
 			grid-row: 5 / 6; 
+		}
+	}
+
+	@media (max-width: $large) {
+		section.container:last-of-type {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(6, max-content);
+
+			ul,
+			p:first-of-type,
+			p:nth-of-type(2),
+			p:nth-of-type(3),
+			p:last-of-type {
+				grid-column: 1 / -1;
+			}
+
+			ul {
+				grid-row: 4 / 5;
+			}
+
+			p:nth-of-type(3) {
+				grid-row: 5 / 6; 
+			}
+	
+			p:last-of-type {
+				grid-row: 6 / 7; 
+			}
 		}
 	}
 }
@@ -120,6 +175,7 @@ section.container {
 		}
 	}
 
+	// Steps to Conribute
 	section.container:last-of-type {
 		grid-template-rows: repeat(3, max-content);
 
@@ -134,6 +190,14 @@ section.container {
 			display: grid;
 			grid-template-rows: repeat(2, max-content);
 			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: $large) {
+			ol {
+				grid-column: 1 / -1;
+				display: flex;
+				flex-direction: column;
+			}
 		}
 	}
 }
